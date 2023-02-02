@@ -1,0 +1,21 @@
+﻿@model Serie
+
+<h1>Detalles Serie</h1>
+
+<a asp-controller="Series"
+    asp-action="Index">
+    Volver a series
+</a>
+
+<div class="card" style="width: 18rem;">
+  <img src="@Model.Imagen" 
+  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Nombre</h5>
+    <p class="card-text">Año: @Model.Anyo</p>
+    <a asp-controller="Personajes"
+        asp-action="PersonajesSerie"
+        asp-route-idserie="@Model.IdSerie"
+        class="btn btn-primary">Personajes</a>
+  </div>
+</div>

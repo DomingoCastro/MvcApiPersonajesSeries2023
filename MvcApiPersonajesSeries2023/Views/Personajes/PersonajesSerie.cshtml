@@ -1,0 +1,24 @@
+﻿@model List<Personaje>
+
+<h1>Personajes Serie</h1>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Personaje</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Personaje person in Model)
+        {
+            <tr>
+                <td>@person.Nombre</td>
+                <td>
+                    <img src="@person.Imagen"
+                        style="width: 100px; height: 100px;"/>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

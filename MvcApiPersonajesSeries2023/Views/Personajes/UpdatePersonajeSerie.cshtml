@@ -1,0 +1,26 @@
+﻿@{
+    List<Personaje> personajes = ViewData["PERSONAJES"] as List<Personaje>;
+    List<Serie> series = ViewData["SERIES"] as List<Serie>;
+}
+
+<h1>Cambiar serie de Personaje</h1>
+
+<form method="post">
+    <label>Seleccione un personaje</label>
+    <select class="form-control" name="idpersonaje">
+        @foreach (Personaje person in personajes)
+        {
+            <option value="@person.IdPersonaje">@person.Nombre</option>
+        }
+    </select>
+    <label>Seleccione una serie</label>
+    <select class="form-control" name="idserie">
+        @foreach (Serie serie in series)
+        {
+            <option value="@serie.IdSerie">@serie.Nombre</option>
+        }
+    </select>
+    <button class="btn btn-warning">
+        Modificar personaje
+    </button>
+</form>
