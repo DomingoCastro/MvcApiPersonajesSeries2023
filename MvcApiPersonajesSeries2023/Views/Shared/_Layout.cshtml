@@ -36,12 +36,7 @@
                                 Modificar serie Personaje
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" 
-                                asp-controller="Series" 
-                                asp-action="Index">
-                                Series
-                            </a>
+                        @await Component.InvokeAsync("MenuSeries")
                         </li>
                     </ul>
                 </div>
